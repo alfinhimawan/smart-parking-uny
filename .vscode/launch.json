@@ -1,0 +1,91 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "app.MainApp",
+            "projectName": "smart-parking-uny-final_df867892"
+        },
+        {
+            "type": "java",
+            "name": "BarcodeGenerator",
+            "request": "launch",
+            "mainClass": "generator.BarcodeGenerator",
+            "projectName": "Kode Program Java (Class-GUI)_Kelompok3_Pertemuan14_5f0ccd25"
+        },
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "app.MainApp",
+            "projectName": "Kode Program Java (Class-GUI)_Kelompok3_Pertemuan14_5f0ccd25"
+        },
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "app.MainApp",
+            "projectName": "Parking Uny New_e55d04ba"
+        },
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "app.MainApp",
+            "projectName": "smart-parking-uny_25a82e0e"
+        },
+        {
+            "type": "java",
+            "name": "BarcodeGenerator",
+            "request": "launch",
+            "mainClass": "generator.BarcodeGenerator",
+            "projectName": "smart-parking-uny_2c0d75e9"
+        },
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "app.MainApp",
+            "projectName": "smart-parking-uny_2c0d75e9"
+        },
+        {
+            "type": "java",
+            "name": "BarcodeGenerator",
+            "request": "launch",
+            "mainClass": "BarcodeGenerator",
+            "projectName": "smart-parking-uny_2c0d75e9"
+        },
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "MainApp",
+            "projectName": "smart-parking-uny_2c0d75e9"
+        },
+        {
+            "type": "java",
+            "name": "MainApp",
+            "request": "launch",
+            "mainClass": "final_project.MainApp",
+            "projectName": "learn-java-gui_ea01cd37"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Pertemuan11.Main",
+            "projectName": "learn-java-gui_ea01cd37"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        }
+    ]
+}

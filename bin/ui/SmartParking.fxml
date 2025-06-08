@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.MainController" fitToWidth="true" fitToHeight="true" styleClass="root-scroll-pane">
+    <content>
+        <BorderPane stylesheets="@style.css" styleClass="root-pane">
+
+            <top>
+                <Label fx:id="faTestLabel" text="&#xf007;" styleClass="fa-icon" BorderPane.alignment="CENTER"/>
+                <Label text="Smart Parking Faculty of Engineering UNY" styleClass="header-label" BorderPane.alignment="CENTER"/>
+            </top>
+
+            <center>
+                <VBox spacing="20" styleClass="card" maxWidth="700" maxHeight="900" alignment="TOP_CENTER">
+                    <Label text="Parkiran IDB Fakultas Teknik" styleClass="info-label" alignment="CENTER" />
+                    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="slot-info-container" >
+                        <Label text="&#xf1b9;" styleClass="fa-icon"/>
+                        <Label text="Slot Tersisa:" styleClass="info-label"/>
+                        <Label fx:id="slotInfo" text="-" styleClass="slot-info"/>
+                    </HBox>
+
+                    <VBox spacing="10" alignment="CENTER">
+                        <Button fx:id="scanQRButton" text="Scan QR untuk Masuk" styleClass="btn-primary" onAction="#handleScanQR">
+                            <tooltip>
+                                <Tooltip text="Klik untuk masuk ke area parkir dengan QR"/>
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="scanQROutButton" text="Scan QR untuk Keluar" styleClass="btn-primary" onAction="#handleScanQROut" disable="true">
+                            <tooltip>
+                                <Tooltip text="Klik untuk keluar dari area parkir dengan QR"/>
+                            </tooltip>
+                        </Button>
+                        <Button fx:id="riwayatButton" text="Lihat Riwayat Parkir" styleClass="btn-primary" onAction="#handleLihatRiwayat">
+                            <tooltip>
+                                <Tooltip text="Lihat riwayat parkir yang sudah dilakukan"/>
+                            </tooltip>
+                        </Button>
+                    </VBox>
+
+                    <TableView fx:id="riwayatTable" prefHeight="200" prefWidth="600" visible="false" managed="false">
+                        <columns>
+                            <TableColumn fx:id="colJenis" text="Jenis Pengguna" prefWidth="150" />
+                            <TableColumn fx:id="colJamMasuk" text="Jam Masuk" prefWidth="150" />
+                            <TableColumn fx:id="colJamKeluar" text="Jam Keluar" prefWidth="150" />
+                        </columns>
+                    </TableView>
+
+                    <ImageView fx:id="mainCameraView" fitWidth="400" fitHeight="300" preserveRatio="true" style="-fx-border-color: #2980b9; -fx-border-width: 2;" visible="false" managed="false" />
+                    <ImageView fx:id="tiketBarcodeView" fitWidth="200" fitHeight="200" preserveRatio="true" visible="false" managed="false" style="-fx-alignment: center; margin-top: 10px;" />
+                </VBox>
+            </center>
+
+            <bottom>
+                <Label text="© 2025 Smart Parking UNY" styleClass="footer-label" BorderPane.alignment="CENTER"/>
+            </bottom>
+        </BorderPane>
+    </content>
+</ScrollPane>
