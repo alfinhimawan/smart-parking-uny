@@ -10,7 +10,7 @@ import java.nio.file.Files;
 
 public class BarcodeGenerator {
     public static void main(String[] args) throws Exception {
-        String[] types = {"mahasiswa", "dosen", "staff", "umum", "pelajar" };
+        String[] types = {"mahasiswa", "dosen", "staff", "umum"};
         int width = 300, height = 300;
         for (String tipe : types) {
             String barcode = tipe.toUpperCase();
