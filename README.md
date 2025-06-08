@@ -25,10 +25,49 @@ Smart Parking UNY adalah aplikasi desktop modern berbasis JavaFX yang dirancang 
 
 ---
 
-## 🚀 Cara Menjalankan
-1. **Pastikan Java 11+ sudah terinstall di komputer Anda.**
-2. Klik dua kali `smart-parking-uny.vbs` (atau shortcut desktop) untuk membuka aplikasi tanpa terminal.
-3. Jika ingin debug/error, jalankan `SmartParking.bat` langsung.
+## 🚀 Cara Menjalankan & Konfigurasi
+
+### 1. **Persiapan Lingkungan**
+- Pastikan **Java JDK 11 atau lebih baru** sudah terinstall dan sudah masuk ke PATH.
+  - Cek dengan perintah: `java -version`
+- Pastikan folder `lib/` berisi:
+  - JavaFX SDK (`javafx-sdk-24.0.1`)
+  - OpenCV JAR & DLL (`opencv-4110.jar`, `opencv_java4110.dll`)
+  - ZXing (`core-3.5.2.jar`, `javase-3.5.2.jar`)
+- Pastikan folder `bin/` berisi hasil kompilasi dan file native OpenCV (`opencv_java4110.dll`).
+
+### 2. **Konfigurasi Path Library (Sudah Otomatis di .bat)**
+- Semua path library sudah diatur otomatis di `SmartParking.bat`.
+- Tidak perlu mengedit path secara manual jika struktur folder tidak diubah.
+
+### 3. **Menjalankan Aplikasi**
+- **Tanpa Terminal (Rekomendasi User):**
+  1. Klik dua kali `smart-parking-uny.vbs` (atau shortcut desktop ke file ini).
+  2. Aplikasi akan terbuka tanpa jendela terminal.
+- **Debug/Error (Developer):**
+  1. Jalankan `SmartParking.bat` langsung (double click atau lewat cmd).
+  2. Jika ingin melihat error Java, edit `SmartParking.bat` dan ganti `javaw` menjadi `java`.
+
+### 4. **Konfigurasi Kamera**
+- Pastikan kamera laptop/PC aktif dan tidak digunakan aplikasi lain.
+- Jika aplikasi tidak bisa mengakses kamera:
+  - Cek pengaturan Windows: Settings → Privacy → Camera → Allow desktop apps to access your camera.
+  - Pastikan driver kamera sudah terinstall.
+
+### 5. **Custom Shortcut & Icon**
+- Untuk shortcut desktop dengan ikon khusus:
+  1. Klik kanan `smart-parking-uny.vbs` → Send to → Desktop (create shortcut).
+  2. Klik kanan shortcut di desktop → Properties → Change Icon → Browse ke `logo-smart-parking.ico`.
+  3. Rename shortcut menjadi "Smart Parking UNY".
+
+### 6. **Troubleshooting**
+- Jika aplikasi tidak berjalan:
+  - Pastikan Java sudah terinstall dan path benar.
+  - Pastikan semua file library dan native ada di folder yang sesuai.
+  - Jalankan `SmartParking.bat` lewat cmd untuk melihat pesan error.
+- Jika kamera tidak aktif:
+  - Pastikan modul `javafx.swing` sudah ditambahkan di `SmartParking.bat` (lihat `--add-modules`).
+  - Pastikan file `opencv_java4110.dll` ada di folder `bin/`.
 
 ---
 
